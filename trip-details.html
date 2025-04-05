@@ -309,23 +309,24 @@
     <div class="trip-hero" id="trip-hero">
         <div class="trip-hero-content">
             <div class="container">
-                <h1 id="trip-title">Himalayan Trek</h1>
+                <h1 id="trip-title">Brahmatal Trek</h1>
+                <p id="trip-subtitle">Enjoy the Best Views of Mt Trishul and Mt Nanda Ghunti</p>
                 <div class="trip-meta">
                     <div class="trip-meta-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span id="trip-location">Nepal</span>
+                        <i class="far fa-calendar"></i>
+                        <span id="trip-duration">5 days / 4 nights</span>
                     </div>
                     <div class="trip-meta-item">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span id="trip-duration">10 Days</span>
+                        <i class="fas fa-mountain"></i>
+                        <span id="trip-difficulty">Moderate</span>
                     </div>
                     <div class="trip-meta-item">
                         <i class="fas fa-users"></i>
-                        <span id="trip-group-size">Max 12 people</span>
+                        <span id="trip-age">15-35 years</span>
                     </div>
                     <div class="trip-meta-item">
-                        <i class="fas fa-hiking"></i>
-                        <span id="trip-difficulty">Moderate</span>
+                        <i class="fas fa-arrow-up"></i>
+                        <span id="trip-altitude">12,250 ft</span>
                     </div>
                 </div>
             </div>
@@ -338,16 +339,8 @@
             <div class="trip-details-grid">
                 <div class="trip-main-content">
                     <div class="trip-description">
-                        <h2>About This Trip</h2>
-                        <p id="trip-description">
-                            The Himalayan Trek is a once-in-a-lifetime adventure that takes you through some of the most breathtaking landscapes on Earth. This 10-day journey will challenge you physically while rewarding you with stunning views of the world's highest mountains, including Mount Everest.
-                        </p>
-                        <p>
-                            Our experienced guides will lead you through ancient trails, remote villages, and pristine forests. You'll have the opportunity to immerse yourself in the local culture, meet friendly Sherpa people, and learn about their traditions and way of life.
-                        </p>
-                        <p>
-                            This trek is suitable for moderately fit individuals who are comfortable walking 5-7 hours per day on varied terrain. No previous trekking experience is required, but a good level of fitness is recommended.
-                        </p>
+                        <h2>About</h2>
+                        <p id="trip-description"></p>
                     </div>
                     
                     <div class="trip-highlights">
@@ -456,42 +449,31 @@
                 <div class="trip-sidebar">
                     <div class="booking-card">
                         <h3>Book This Trip</h3>
-                        <div class="price-tag">$899</div>
+                        <div class="price-tag">₹5,999</div>
                         <div class="booking-details">
                             <div class="booking-detail-item">
                                 <span>Duration</span>
-                                <span>10 Days</span>
+                                <span>5 days / 4 nights</span>
                             </div>
                             <div class="booking-detail-item">
-                                <span>Group Size</span>
-                                <span>Max 12 people</span>
+                                <span>Age</span>
+                                <span>15-35 years</span>
                             </div>
                             <div class="booking-detail-item">
                                 <span>Difficulty</span>
                                 <span>Moderate</span>
                             </div>
                             <div class="booking-detail-item">
-                                <span>Start Location</span>
-                                <span>Kathmandu, Nepal</span>
+                                <span>Altitude</span>
+                                <span>12,250 ft</span>
+                            </div>
+                            <div class="booking-detail-item">
+                                <span>Next Available Dates</span>
+                                <span id="next-dates"></span>
                             </div>
                         </div>
                         
                         <form class="booking-form" id="booking-form">
-                            <div class="form-group">
-                                <label for="trip-date">Trip Date</label>
-                                <input type="date" id="trip-date" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="travelers">Number of Travelers</label>
-                                <select id="travelers" required>
-                                    <option value="">Select</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
                             <div class="form-group">
                                 <label for="name">Full Name</label>
                                 <input type="text" id="name" placeholder="Your full name" required>
@@ -504,11 +486,22 @@
                                 <label for="phone">Phone</label>
                                 <input type="tel" id="phone" placeholder="Your phone number" required>
                             </div>
+                            <div class="form-group">
+                                <label for="travelers">Number of Travelers</label>
+                                <select id="travelers" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
                             
                             <div class="booking-summary">
                                 <div class="booking-summary-item">
                                     <span>Price per person</span>
-                                    <span>$899</span>
+                                    <span>₹5,999</span>
                                 </div>
                                 <div class="booking-summary-item">
                                     <span>Number of travelers</span>
@@ -516,7 +509,7 @@
                                 </div>
                                 <div class="booking-summary-item total">
                                     <span>Total Price</span>
-                                    <span id="total-price">$899</span>
+                                    <span id="total-price">₹5,999</span>
                                 </div>
                             </div>
                             
@@ -528,72 +521,12 @@
                         <h3>Need Help?</h3>
                         <p>If you have any questions about this trip, feel free to contact us:</p>
                         <div style="margin-top: 20px;">
-                            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                            <p><i class="fas fa-phone"></i> +91 1234567890</p>
                             <p><i class="fas fa-envelope"></i> info@adventureexplorer.com</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="related-trips">
-                <h2>Related Trips</h2>
-                <div class="trip-cards">
-                    <div class="trip-card">
-                        <div class="trip-image">
-                            <img src="images/trip4.jpg" alt="African Safari">
-                        </div>
-                        <div class="trip-content">
-                            <h3>African Safari</h3>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Tanzania</p>
-                            <p class="description">Witness the incredible wildlife of Africa on this safari adventure.</p>
-                            <div class="trip-footer">
-                                <span class="price">$1799</span>
-                                <a href="trip-details.html?id=4" class="btn btn-small">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="trip-card">
-                        <div class="trip-image">
-                            <img src="images/trip5.jpg" alt="European Adventure">
-                        </div>
-                        <div class="trip-content">
-                            <h3>European Adventure</h3>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Multiple Countries</p>
-                            <p class="description">Travel through multiple European countries in this comprehensive tour.</p>
-                            <div class="trip-footer">
-                                <span class="price">$1999</span>
-                                <a href="trip-details.html?id=5" class="btn btn-small">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="trip-card">
-                        <div class="trip-image">
-                            <img src="images/trip6.jpg" alt="Australian Outback">
-                        </div>
-                        <div class="trip-content">
-                            <h3>Australian Outback</h3>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Australia</p>
-                            <p class="description">Explore the vast and beautiful Australian Outback.</p>
-                            <div class="trip-footer">
-                                <span class="price">$1599</span>
-                                <a href="trip-details.html?id=6" class="btn btn-small">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <h2>Stay Updated</h2>
-            <p>Subscribe to our newsletter for the latest adventures and exclusive offers</p>
-            <form id="newsletter-form">
-                <input type="email" placeholder="Your email address" required>
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-            </form>
         </div>
     </section>
 
@@ -623,98 +556,119 @@
                 <div class="footer-section">
                     <h3>Contact Us</h3>
                     <p><i class="fas fa-map-marker-alt"></i> 123 Adventure Street, Explorer City</p>
-                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-phone"></i> +91 1234567890</p>
                     <p><i class="fas fa-envelope"></i> info@adventureexplorer.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Adventure Explorer. All rights reserved.</p>
+                <p>&copy; 2024 Adventure Explorer. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script>
-        // Trip data (in a real application, this would come from a database)
-        const trips = [
-            {
-                id: 1,
-                title: "Himalayan Trek",
-                location: "Nepal",
-                duration: "10 Days",
-                groupSize: "Max 12 people",
-                difficulty: "Moderate",
-                price: 899,
-                description: "The Himalayan Trek is a once-in-a-lifetime adventure that takes you through some of the most breathtaking landscapes on Earth. This 10-day journey will challenge you physically while rewarding you with stunning views of the world's highest mountains, including Mount Everest.",
-                heroImage: "images/trip1.jpg"
-            },
-            {
-                id: 2,
-                title: "Amazon Rainforest",
-                location: "Brazil",
-                duration: "8 Days",
-                groupSize: "Max 10 people",
-                difficulty: "Easy to Moderate",
-                price: 1299,
-                description: "Explore the biodiversity of the Amazon with our guided tours. This 8-day adventure takes you deep into the heart of the world's largest rainforest, where you'll encounter exotic wildlife, learn about indigenous cultures, and experience the incredible natural beauty of the Amazon.",
-                heroImage: "images/trip2.jpg"
-            },
-            {
-                id: 3,
-                title: "Japanese Culture",
-                location: "Japan",
-                duration: "12 Days",
-                groupSize: "Max 15 people",
-                difficulty: "Easy",
-                price: 1499,
-                description: "Immerse yourself in Japanese traditions and modern culture. This 12-day journey takes you from the bustling streets of Tokyo to the serene temples of Kyoto, allowing you to experience the perfect blend of old and new in this fascinating country.",
-                heroImage: "images/trip3.jpg"
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get trip ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const tripId = urlParams.get('id');
+            
+            // Find the trip data
+            let trip;
+            for (let category in trips) {
+                trip = trips[category].find(t => t.id === tripId);
+                if (trip) break;
             }
-        ];
-        
-        // Get trip ID from URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const tripId = parseInt(urlParams.get('id')) || 1;
-        
-        // Find the trip data
-        const trip = trips.find(t => t.id === tripId) || trips[0];
-        
-        // Update page content
-        document.getElementById('trip-title').textContent = trip.title;
-        document.getElementById('trip-location').textContent = trip.location;
-        document.getElementById('trip-duration').textContent = trip.duration;
-        document.getElementById('trip-group-size').textContent = trip.groupSize;
-        document.getElementById('trip-difficulty').textContent = trip.difficulty;
-        document.getElementById('trip-description').textContent = trip.description;
-        document.getElementById('trip-hero').style.backgroundImage = `url(${trip.heroImage})`;
-        
-        // Booking form functionality
-        const travelersSelect = document.getElementById('travelers');
-        const travelersCount = document.getElementById('travelers-count');
-        const totalPrice = document.getElementById('total-price');
-        const bookingForm = document.getElementById('booking-form');
-        
-        if (travelersSelect) {
+            
+            if (!trip) {
+                trip = trips.snowTreks[0]; // Default to first snow trek if ID not found
+            }
+            
+            // Update page content
+            document.getElementById('trip-title').textContent = trip.title;
+            document.getElementById('trip-description').textContent = trip.description;
+            document.getElementById('trip-hero').style.backgroundImage = `url(${trip.heroImage})`;
+            document.getElementById('trip-duration').textContent = trip.duration;
+            document.getElementById('trip-difficulty').textContent = trip.difficulty;
+            
+            // Show next available dates
+            document.getElementById('next-dates').textContent = trip.dates[0];
+            
+            // Populate attractions
+            const attractionsGrid = document.getElementById('attractions-grid');
+            if (trip.highlights) {
+                trip.highlights.forEach(highlight => {
+                    const card = document.createElement('div');
+                    card.className = 'attraction-card';
+                    card.innerHTML = `
+                        <img src="images/attractions/${highlight.toLowerCase().replace(/\s+/g, '-')}.jpg" 
+                             alt="${highlight}" 
+                             onerror="this.src='images/placeholder.jpg'">
+                        <h3>${highlight}</h3>
+                    `;
+                    attractionsGrid.appendChild(card);
+                });
+            }
+            
+            // Populate schedule
+            const scheduleTimeline = document.getElementById('schedule-timeline');
+            const days = [
+                {
+                    title: "Reporting at Lohajung Campsite",
+                    description: "Arrival at Campsite, Brifing & Acclimatization"
+                },
+                {
+                    title: "Trek to Bekaltal",
+                    description: "Night stay at Bekaltal Campsite"
+                },
+                {
+                    title: "Trek to Brahmatal",
+                    description: "Visit Zandi Top & Night stay at Brahmatal Campsite"
+                },
+                {
+                    title: "Trek to Brahmatal Top",
+                    description: "Night Stay at Bekaltal Campsite"
+                },
+                {
+                    title: "Trek Back to Lohajung & Disperse",
+                    description: "Disperse after Lunch from Campsite"
+                }
+            ];
+            
+            days.forEach((day, index) => {
+                const item = document.createElement('div');
+                item.className = 'schedule-item';
+                item.innerHTML = `
+                    <h3>${day.title}</h3>
+                    <p>${day.description}</p>
+                    <a href="#" class="know-more">
+                        Know more
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                `;
+                scheduleTimeline.appendChild(item);
+            });
+            
+            // Handle booking form
+            const travelersSelect = document.getElementById('travelers');
+            const travelersCount = document.getElementById('travelers-count');
+            const totalPrice = document.getElementById('total-price');
+            const bookingForm = document.getElementById('booking-form');
+            
             travelersSelect.addEventListener('change', function() {
                 const count = parseInt(this.value) || 1;
                 travelersCount.textContent = count;
-                totalPrice.textContent = `$${trip.price * count}`;
+                totalPrice.textContent = `₹${(trip.price * count).toLocaleString()}`;
             });
-        }
-        
-        if (bookingForm) {
+            
             bookingForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                
-                // In a real application, this would send the booking data to a server
                 alert('Booking submitted successfully! We will contact you shortly to confirm your reservation.');
-                
-                // Reset form
                 this.reset();
                 travelersCount.textContent = '1';
-                totalPrice.textContent = `$${trip.price}`;
+                totalPrice.textContent = `₹${trip.price.toLocaleString()}`;
             });
-        }
+        });
     </script>
 </body>
 </html> 

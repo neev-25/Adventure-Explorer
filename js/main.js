@@ -154,316 +154,362 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Trip data
-const trips = [
-    {
-        id: 1,
-        title: "Himalayan Trek",
-        location: "Uttarakhand, India",
-        duration: "7 Days",
-        groupSize: "Max 15 people",
-        difficulty: "Moderate",
-        price: 15999,
-        description: "Experience the majestic Himalayas with our guided trek through Uttarakhand. Visit ancient temples, stay in mountain villages, and witness breathtaking views of snow-capped peaks.",
-        highlights: [
-            "Trek through beautiful mountain trails",
-            "Visit ancient temples and monasteries",
-            "Stay in traditional mountain villages",
-            "Experience local culture and cuisine",
-            "Professional guides and support team"
-        ],
-        itinerary: [
-            {
-                day: 1,
-                title: "Arrival in Dehradun",
-                description: "Arrive in Dehradun, meet your guide, and prepare for the trek."
-            },
-            {
-                day: 2,
-                title: "Trek to Base Camp",
-                description: "Start the trek to base camp, passing through beautiful forests."
-            },
-            {
-                day: 3,
-                title: "Acclimatization Day",
-                description: "Rest day for acclimatization and short hikes around the camp."
-            },
-            {
-                day: 4,
-                title: "Summit Day",
-                description: "Early morning trek to the summit, witness sunrise from the top."
-            },
-            {
-                day: 5,
-                title: "Return Journey",
-                description: "Trek back to base camp, celebrate the successful expedition."
-            },
-            {
-                day: 6,
-                title: "Cultural Experience",
-                description: "Visit local villages, interact with locals, and experience their culture."
-            },
-            {
-                day: 7,
-                title: "Departure",
-                description: "Return to Dehradun and depart with unforgettable memories."
-            }
-        ],
-        heroImage: "images/trip1.jpg"
-    },
-    {
-        id: 2,
-        title: "Kerala Backwaters",
-        location: "Kerala, India",
-        duration: "5 Days",
-        groupSize: "Max 10 people",
-        difficulty: "Easy",
-        price: 12999,
-        description: "Explore the serene backwaters of Kerala in a traditional houseboat. Experience the unique culture, cuisine, and natural beauty of God's own country.",
-        highlights: [
-            "Houseboat cruise through backwaters",
-            "Visit to spice plantations",
-            "Traditional Kerala massage",
-            "Local village visits",
-            "Traditional dance performances"
-        ],
-        itinerary: [
-            {
-                day: 1,
-                title: "Arrival in Kochi",
-                description: "Arrive in Kochi, explore Fort Kochi and Chinese fishing nets."
-            },
-            {
-                day: 2,
-                title: "Backwater Cruise",
-                description: "Board houseboat and cruise through the backwaters."
-            },
-            {
-                day: 3,
-                title: "Cultural Experience",
-                description: "Visit local villages and spice plantations."
-            },
-            {
-                day: 4,
-                title: "Relaxation Day",
-                description: "Enjoy traditional massage and local cuisine."
-            },
-            {
-                day: 5,
-                title: "Departure",
-                description: "Return to Kochi and depart."
-            }
-        ],
-        heroImage: "images/trip2.jpg"
-    },
-    {
-        id: 3,
-        title: "Rajasthan Heritage",
-        location: "Rajasthan, India",
-        duration: "8 Days",
-        groupSize: "Max 12 people",
-        difficulty: "Easy",
-        price: 18999,
-        description: "Journey through the royal state of Rajasthan. Visit magnificent forts, palaces, and experience the rich cultural heritage of the land of kings.",
-        highlights: [
-            "Visit to majestic forts and palaces",
-            "Desert safari in Jaisalmer",
-            "Traditional folk performances",
-            "Local village visits",
-            "Camel ride in the desert"
-        ],
-        itinerary: [
-            {
-                day: 1,
-                title: "Arrival in Jaipur",
-                description: "Arrive in Jaipur, visit Amber Fort and City Palace."
-            },
-            {
-                day: 2,
-                title: "Jaipur Exploration",
-                description: "Visit Hawa Mahal, Jantar Mantar, and local markets."
-            },
-            {
-                day: 3,
-                title: "Journey to Jodhpur",
-                description: "Travel to Jodhpur, visit Mehrangarh Fort."
-            },
-            {
-                day: 4,
-                title: "Jodhpur to Jaisalmer",
-                description: "Travel to Jaisalmer, evening desert safari."
-            },
-            {
-                day: 5,
-                title: "Jaisalmer Fort",
-                description: "Explore Jaisalmer Fort and local markets."
-            },
-            {
-                day: 6,
-                title: "Desert Camp",
-                description: "Stay in desert camp, enjoy folk performances."
-            },
-            {
-                day: 7,
-                title: "Return Journey",
-                description: "Travel back to Jaipur, evening cultural show."
-            },
-            {
-                day: 8,
-                title: "Departure",
-                description: "Depart from Jaipur with unforgettable memories."
-            }
-        ],
-        heroImage: "images/trip3.jpg"
-    },
-    {
-        id: 4,
-        title: "North East Explorer",
-        location: "Assam & Meghalaya, India",
-        duration: "6 Days",
-        groupSize: "Max 8 people",
-        difficulty: "Moderate",
-        price: 16999,
-        description: "Discover the unexplored beauty of North East India. Visit living root bridges, tea gardens, and experience the unique culture of the region.",
-        highlights: [
-            "Visit to living root bridges",
-            "Tea garden experience",
-            "Waterfall exploration",
-            "Local tribal village visits",
-            "Traditional cuisine experience"
-        ],
-        itinerary: [
-            {
-                day: 1,
-                title: "Arrival in Guwahati",
-                description: "Arrive in Guwahati, visit Kamakhya Temple."
-            },
-            {
-                day: 2,
-                title: "Journey to Shillong",
-                description: "Travel to Shillong, visit local markets."
-            },
-            {
-                day: 3,
-                title: "Living Root Bridges",
-                description: "Trek to living root bridges in Cherrapunji."
-            },
-            {
-                day: 4,
-                title: "Waterfall Exploration",
-                description: "Visit various waterfalls and caves."
-            },
-            {
-                day: 5,
-                title: "Tea Garden Visit",
-                description: "Visit tea gardens and learn about tea processing."
-            },
-            {
-                day: 6,
-                title: "Departure",
-                description: "Return to Guwahati and depart."
-            }
-        ],
-        heroImage: "images/trip4.jpg"
-    },
-    {
-        id: 5,
-        title: "Goa Beach Adventure",
-        location: "Goa, India",
-        duration: "5 Days",
-        groupSize: "Max 10 people",
-        difficulty: "Easy",
-        price: 11999,
-        description: "Experience the perfect blend of beaches, culture, and adventure in Goa. From water sports to heritage walks, discover the best of Goa.",
-        highlights: [
-            "Water sports activities",
-            "Heritage walk in Old Goa",
-            "Spice plantation visit",
-            "Sunset cruise",
-            "Local market exploration"
-        ],
-        itinerary: [
-            {
-                day: 1,
-                title: "Arrival in Goa",
-                description: "Arrive in Goa, evening beach relaxation."
-            },
-            {
-                day: 2,
-                title: "Water Sports",
-                description: "Enjoy various water sports activities."
-            },
-            {
-                day: 3,
-                title: "Heritage Tour",
-                description: "Visit Old Goa churches and spice plantation."
-            },
-            {
-                day: 4,
-                title: "Island Cruise",
-                description: "Sunset cruise and dolphin watching."
-            },
-            {
-                day: 5,
-                title: "Departure",
-                description: "Last minute shopping and departure."
-            }
-        ],
-        heroImage: "images/trip5.jpg"
-    },
-    {
-        id: 6,
-        title: "Karnataka Heritage",
-        location: "Karnataka, India",
-        duration: "7 Days",
-        groupSize: "Max 12 people",
-        difficulty: "Easy",
-        price: 14999,
-        description: "Explore the rich heritage of Karnataka. Visit ancient temples, historical monuments, and experience the diverse culture of South India.",
-        highlights: [
-            "Visit to ancient temples",
-            "Historical monument exploration",
-            "Local village visits",
-            "Traditional dance performances",
-            "Local cuisine experience"
-        ],
-        itinerary: [
-            {
-                day: 1,
-                title: "Arrival in Bangalore",
-                description: "Arrive in Bangalore, city tour."
-            },
-            {
-                day: 2,
-                title: "Mysore Palace",
-                description: "Visit Mysore Palace and local markets."
-            },
-            {
-                day: 3,
-                title: "Hampi Exploration",
-                description: "Explore the ruins of Hampi."
-            },
-            {
-                day: 4,
-                title: "Temple Tour",
-                description: "Visit ancient temples and learn about their history."
-            },
-            {
-                day: 5,
-                title: "Cultural Experience",
-                description: "Traditional dance performance and local cuisine."
-            },
-            {
-                day: 6,
-                title: "Local Village Visit",
-                description: "Visit local villages and interact with locals."
-            },
-            {
-                day: 7,
-                title: "Departure",
-                description: "Return to Bangalore and depart."
-            }
-        ],
-        heroImage: "images/trip6.jpg"
-    }
-]; 
+// Trip data with fixed dates and special features
+const trips = {
+    snowTreks: [
+        {
+            id: "brahmatal",
+            title: "Brahmatal Trek",
+            location: "Uttarakhand, India",
+            duration: "6 Days",
+            groupSize: "Max 15 people",
+            difficulty: "Moderate",
+            price: 12999,
+            dates: [
+                "December 15-20, 2024",
+                "December 25-30, 2024",
+                "January 5-10, 2025",
+                "January 15-20, 2025"
+            ],
+            description: "Experience the mystical winter trek to Brahmatal, a pristine high-altitude lake blessed by Lord Brahma himself.",
+            folkTales: [
+                "Lord Brahma chose this serene lake for meditation to understand universe's mysteries",
+                "The lake remains partially unfrozen even in harsh winters due to Brahma's eternal spiritual energy",
+                "Ancient sages performed rituals here seeking divine wisdom"
+            ],
+            highlights: [
+                "Snow-covered alpine meadows",
+                "Panoramic Himalayan views",
+                "Ancient meditation spots",
+                "High-altitude lake visit",
+                "Traditional mountain villages"
+            ],
+            specialFeatures: [
+                "Night camping under starlit skies",
+                "Professional photography sessions",
+                "Local folklore sessions",
+                "Emergency medical support"
+            ],
+            heroImage: "images/brahmatal.jpg"
+        },
+        {
+            id: "dalhousie-winter",
+            title: "Dalhousie Winter",
+            location: "Himachal Pradesh, India",
+            duration: "5 Days",
+            groupSize: "Max 12 people",
+            difficulty: "Easy",
+            price: 9999,
+            dates: [
+                "December 20-24, 2024",
+                "January 1-5, 2025",
+                "January 15-19, 2025",
+                "February 1-5, 2025"
+            ],
+            description: "Discover the winter wonderland of Dalhousie, with its snow-covered peaks and colonial charm.",
+            folkTales: [
+                "Sui Mata's sacrifice legend",
+                "Tales of Kalatop Wildlife Sanctuary",
+                "Mystical forest spirits of Kalatop"
+            ],
+            highlights: [
+                "Snow activities in Khajjiar",
+                "Visit to Kalatop Sanctuary",
+                "Colonial heritage walks",
+                "Local Himachali cuisine",
+                "Sunset at Panchpula"
+            ],
+            specialFeatures: [
+                "Photography workshops",
+                "Local craft sessions",
+                "Bonfire evenings",
+                "Heritage hotel stay"
+            ],
+            heroImage: "images/dalhousie-winter.jpg"
+        },
+        {
+            id: "kashmir-winter",
+            title: "Kashmir Winter Magic",
+            location: "Kashmir, India",
+            duration: "7 Days",
+            groupSize: "Max 10 people",
+            difficulty: "Moderate",
+            price: 18999,
+            dates: [
+                "December 10-16, 2024",
+                "December 24-30, 2024",
+                "January 7-13, 2025",
+                "January 21-27, 2025"
+            ],
+            description: "Experience the magical winter wonderland of Kashmir with its pristine snow landscapes and rich culture.",
+            folkTales: [
+                "Pehd Nag and the Tawi River legend",
+                "Tales of Yemberzal - the green-eyed spirit",
+                "Stories of ancient Kashmiri saints"
+            ],
+            highlights: [
+                "Gulmarg ski resort visit",
+                "Traditional Kashmiri cuisine",
+                "Snow sports activities",
+                "Cultural performances",
+                "Local handicraft workshops"
+            ],
+            specialFeatures: [
+                "Ski lessons for beginners",
+                "Kashmiri cooking classes",
+                "Photography tours",
+                "Traditional homestay"
+            ],
+            heroImage: "images/kashmir-winter.jpg"
+        },
+        {
+            id: "kedarkantha",
+            title: "Kedarkantha Winter Trek",
+            location: "Uttarakhand, India",
+            duration: "6 Days",
+            groupSize: "Max 15 people",
+            difficulty: "Moderate",
+            price: 11999,
+            dates: [
+                "December 15-20, 2024",
+                "December 25-30, 2024",
+                "January 5-10, 2025",
+                "January 15-20, 2025"
+            ],
+            description: "Summit the majestic Kedarkantha peak in its winter glory.",
+            folkTales: [
+                "According to Hindu mythology, the Kedarkantha temple was built by the Pandavas",
+                "Lord Shiva meditated here in the form of a bull",
+                "The peak is considered sacred and is believed to be where Lord Shiva held council with other gods"
+            ],
+            highlights: [
+                "Snow-covered trails and camping",
+                "Visit to ancient temples",
+                "Stunning sunrise views",
+                "Traditional Garhwali cuisine",
+                "Professional guides"
+            ],
+            specialFeatures: [
+                "Night camping under stars",
+                "Hot meals throughout trek",
+                "Professional photography",
+                "Medical support"
+            ],
+            heroImage: "images/kedarkantha.jpg"
+        },
+        {
+            id: "manali-winter",
+            title: "Manali Winter Adventure",
+            location: "Himachal Pradesh, India",
+            duration: "5 Days",
+            groupSize: "Max 12 people",
+            difficulty: "Easy to Moderate",
+            price: 10999,
+            dates: [
+                "December 20-24, 2024",
+                "January 3-7, 2025",
+                "January 17-21, 2025",
+                "January 31-February 4, 2025"
+            ],
+            description: "Experience the winter charm of Manali with snow activities and cultural exploration.",
+            folkTales: [
+                "Tales of Hidimba Temple",
+                "Legends of Manu Temple",
+                "Stories of the Valley of Gods"
+            ],
+            highlights: [
+                "Snow activities in Solang",
+                "Hot spring visits",
+                "Local temple tours",
+                "Traditional food tasting",
+                "Cultural performances"
+            ],
+            specialFeatures: [
+                "Ski workshops",
+                "Local art classes",
+                "Evening bonfires",
+                "Luxury camp stay"
+            ],
+            heroImage: "images/manali-winter.jpg"
+        }
+    ],
+    summerEvents: [
+        {
+            id: "dharamshala",
+            title: "Dharamshala Retreat",
+            location: "Himachal Pradesh, India",
+            duration: "4 Days",
+            groupSize: "Max 15 people",
+            difficulty: "Easy",
+            price: 8999,
+            dates: [
+                "April 10-13, 2024",
+                "April 25-28, 2024",
+                "May 10-13, 2024",
+                "May 25-28, 2024"
+            ],
+            description: "Experience the spiritual and natural beauty of Dharamshala, home to the Dalai Lama.",
+            folkTales: [
+                "Bhagsu Nag Temple legends",
+                "Dalai Lama's Prophecy",
+                "Tales of Kalatop Wildlife Sanctuary"
+            ],
+            highlights: [
+                "Visit McLeodganj",
+                "Buddhist temple tours",
+                "Meditation sessions",
+                "Nature walks",
+                "Local cooking classes"
+            ],
+            specialFeatures: [
+                "Tibetan cooking workshop",
+                "Meditation retreat",
+                "Tea garden visit",
+                "Local art classes"
+            ],
+            heroImage: "images/dharamshala.jpg"
+        },
+        {
+            id: "har-ki-dun",
+            title: "Har ki Dun Trek",
+            location: "Uttarakhand, India",
+            duration: "6 Days",
+            groupSize: "Max 12 people",
+            difficulty: "Moderate",
+            price: 12999,
+            dates: [
+                "May 5-10, 2024",
+                "May 20-25, 2024",
+                "June 5-10, 2024",
+                "June 20-25, 2024"
+            ],
+            description: "Trek through the Valley of Gods, experiencing pristine nature and ancient villages.",
+            folkTales: [
+                "Pandavas' Journey to Heaven",
+                "Sacred Streams legends",
+                "Tales of Forest Spirits"
+            ],
+            highlights: [
+                "Ancient village visits",
+                "Himalayan flora and fauna",
+                "Mountain stream camping",
+                "Traditional architecture",
+                "Local festival experience"
+            ],
+            specialFeatures: [
+                "Village homestay program",
+                "Local craft workshops",
+                "Mountain photography",
+                "Cultural performances"
+            ],
+            heroImage: "images/har-ki-dun.jpg"
+        },
+        {
+            id: "kasol-manali",
+            title: "Kasol Manali Adventure",
+            location: "Himachal Pradesh, India",
+            duration: "5 Days",
+            groupSize: "Max 12 people",
+            difficulty: "Easy to Moderate",
+            price: 9999,
+            dates: [
+                "May 10-14, 2024",
+                "May 25-29, 2024",
+                "June 5-9, 2024",
+                "June 20-24, 2024"
+            ],
+            description: "Explore the serene beauty of Parvati Valley and experience the vibrant culture of Manali.",
+            folkTales: [
+                "Kasol's transformation into 'Mini Israel'",
+                "Legends of Lord Shiva meditating in Parvati Valley",
+                "Mythological tales of Manikaran hot springs"
+            ],
+            highlights: [
+                "Visit to Manikaran Sahib",
+                "Trekking in Parvati Valley",
+                "Local village exploration",
+                "Camping by the river",
+                "Traditional Himachali food"
+            ],
+            specialFeatures: [
+                "Hot spring bath experience",
+                "Local handicraft workshops",
+                "Cultural performances",
+                "Riverside camping"
+            ],
+            heroImage: "images/kasol-manali.jpg"
+        }
+    ],
+    highlightedEvents: [
+        {
+            id: "kuari-pass",
+            title: "Kuari Pass Trek",
+            location: "Uttarakhand, India",
+            duration: "7 Days",
+            groupSize: "Max 12 people",
+            difficulty: "Moderate to Challenging",
+            price: 14999,
+            dates: [
+                "April 15-21, 2024",
+                "May 1-7, 2024",
+                "May 15-21, 2024",
+                "June 1-7, 2024"
+            ],
+            description: "Trek through the ancient Lord Curzon's trail with breathtaking views of Nanda Devi.",
+            folkTales: [
+                "Goddess Parvati's meditation spot",
+                "Tales of Neelkanth Peak",
+                "Ancient shepherd routes"
+            ],
+            highlights: [
+                "Panoramic Himalayan views",
+                "High-altitude meadows",
+                "Ancient forests",
+                "Local village visits",
+                "Mountain photography"
+            ],
+            specialFeatures: [
+                "Expert photography guidance",
+                "Local guide stories",
+                "Camping under stars",
+                "Traditional meals"
+            ],
+            heroImage: "images/kuari-pass.jpg"
+        },
+        {
+            id: "zanskar",
+            title: "Zanskar Valley Expedition",
+            location: "Ladakh, India",
+            duration: "8 Days",
+            groupSize: "Max 10 people",
+            difficulty: "Challenging",
+            price: 24999,
+            dates: [
+                "July 5-12, 2024",
+                "July 20-27, 2024",
+                "August 5-12, 2024",
+                "August 20-27, 2024"
+            ],
+            description: "Journey through the remote Zanskar Valley, experiencing its unique culture and landscapes.",
+            folkTales: [
+                "The Creation Myth of Indus River",
+                "Legend of Sengge Namgyal",
+                "Tales of the Snow Lion"
+            ],
+            highlights: [
+                "Visit ancient monasteries",
+                "Cross high mountain passes",
+                "Experience local culture",
+                "River rafting adventure",
+                "Buddhist meditation sessions"
+            ],
+            specialFeatures: [
+                "Monastery stay experience",
+                "Traditional mask dance show",
+                "High-altitude photography",
+                "Local family homestay"
+            ],
+            heroImage: "images/zanskar.jpg"
+        }
+    ]
+}; 
